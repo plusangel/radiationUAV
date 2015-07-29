@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 
+<!--launch a custom landscape from the worlds folder-->
 <launch>
   <include file="$(find hector_gazebo_worlds)/launch/start.launch">
    <arg name="world" value="$(find hector_gazebo_worlds)/worlds/MYROBOT.world"/> 
