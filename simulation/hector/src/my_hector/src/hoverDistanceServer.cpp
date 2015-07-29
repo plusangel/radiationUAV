@@ -1,12 +1,12 @@
 ////////////////////////////////////////////////////////////////////////
-//  Next generation mapping using UAS assisted dynamic monitoring	  //
-//  networks														  //
-//  																  //
-//  Actionlib server responsible for moving the UAV	        		  //  
-//	a requested vertical distance based on the sonar measurement      //
-//  (distance from ground)	  										  //
-//																	  //
-//  Angelos Plastropoulos 											  //
+//  Next generation mapping using UAS assisted dynamic monitoring	  
+//  networks														  
+//  																  
+//  Actionlib server responsible for moving the UAV	        		   
+//	a requested vertical distance based on the sonar measurement      
+//  (distance from ground)	  										  
+//																	  
+//  Angelos Plastropoulos 											  
 ////////////////////////////////////////////////////////////////////////
 
 #include <ros/ros.h>

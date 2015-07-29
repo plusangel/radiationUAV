@@ -1,10 +1,10 @@
 ////////////////////////////////////////////////////////////////////////
-//  Next generation mapping using UAS assisted dynamic monitoring	  //
-//  networks														  //
-//  																  //
-//  Obstacle Avoidance Finate State Machine (version.2)				  //  
-//																	  //
-//  Angelos Plastropoulos 											  //
+//  Next generation mapping using UAS assisted dynamic monitoring	  
+//  networks														  
+//  																  
+//  Obstacle Avoidance Finate State Machine (version.2)				   
+//																	  
+//  Angelos Plastropoulos 											  
 ////////////////////////////////////////////////////////////////////////
 
 // Most common ros headers

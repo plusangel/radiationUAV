@@ -1,10 +1,10 @@
 ////////////////////////////////////////////////////////////////////////
-//  Next generation mapping using UAS assisted dynamic monitoring	  //
-//  networks														  //
-//  																  //
-//  UAV change heading												  //  
-//																	  //
-//  Angelos Plastropoulos 											  //
+//  Next generation mapping using UAS assisted dynamic monitoring	  
+//  networks														  
+//  																  
+//  UAV change heading												   
+//																	  
+//  Angelos Plastropoulos 											  
 ////////////////////////////////////////////////////////////////////////
 
 #include <ros/ros.h>

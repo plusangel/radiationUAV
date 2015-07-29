@@ -1,10 +1,10 @@
 ////////////////////////////////////////////////////////////////////////
-//  Next generation mapping using UAS assisted dynamic monitoring	  //
-//  networks														  //
-//  																  //
-//  Test the actionlib server responsible for changing the UAV heading//  
-//																	  //
-//  Angelos Plastropoulos 											  //
+//  Next generation mapping using UAS assisted dynamic monitoring	  
+//  networks														  
+//  																  
+//  Test the actionlib server responsible for changing the UAV heading  
+//																	  
+//  Angelos Plastropoulos 											  
 ////////////////////////////////////////////////////////////////////////
 
 #include <ros/ros.h>

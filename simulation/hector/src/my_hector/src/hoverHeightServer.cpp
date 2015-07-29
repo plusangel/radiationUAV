@@ -1,11 +1,11 @@
 ////////////////////////////////////////////////////////////////////////
-//  Next generation mapping using UAS assisted dynamic monitoring	  //
-//  networks														  //
-//  																  //
-//  Actionlib server responsible for changing the UAV    		      //  
-//	altitude to a requested height									  //
-//																	  //
-//  Angelos Plastropoulos 											  //
+//  Next generation mapping using UAS assisted dynamic monitoring	  
+//  networks														  
+//  																  
+//  Actionlib server responsible for changing the UAV    		       
+//	altitude to a requested height									  
+//																	  
+//  Angelos Plastropoulos 											  
 ////////////////////////////////////////////////////////////////////////
 
 #include <ros/ros.h>
