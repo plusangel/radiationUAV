@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <world name="default">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <!--<include>
+      <uri>model://gas_station</uri>
+      <name>gas_station</name>
+      <pose>-2.0 7.0 0 0 0 0</pose>
+    </include>-->
+    <include>
+      <uri>model://grey_wall</uri>
+      <name>grey_wall_front1</name>
+      <pose>5.0 0 0.0 0 0 1.57</pose>
+    </include>
+    <!--<include> second wall
+      <uri>model://grey_wall</uri>
+      <name>grey_wall_front2</name>
+      <pose>5.0 -5.0 -1.0 0 0 1.57</pose>
+    </include>-->
+    <!--<include>
+      <uri>model://grey_wall</uri>
+      <name>grey_wall_back</name>
+      <pose>-2.0 0 0 0 0 1.57</pose>
+    </include>-->
+    <include>
+      <uri>model://grey_wall</uri>
+      <name>grey_wall_left</name>
+      <pose>1.0 4.5 -1.0 0 0.0 0.0</pose>
+    </include>
+    <include>
+      <uri>model://grey_wall</uri>
+      <name>grey_wall_right</name>
+      <pose>1.0 -4.5 -1.0 0 0.0 0.0</pose> 
+    </include>
+  </world>
+</sdf>
+<!--grey wall rightx=6.0 y=-9.0 complex -->

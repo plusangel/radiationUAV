@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<launch>
+   
+  <!-- Start Gazebo with wg world running in (max) realtime -->
+  <include file="$(find hector_gazebo_worlds)/launch/my_scenario.launch"/>
+   
+  <!-- Spawn simulated quadrotor uav -->
+  <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch" >
+    <arg name="model" value="$(find hector_quadrotor_description)/urdf/quadrotor_hokuyo_utm30lx.gazebo.xacro"/> 
+  </include>
+   
+   <!-- Start hover node -->
+   <node name="hover_node" pkg="my_hector" type="hover"/>
+   <!-- Start hoverHeight Server node -->
+   <node name="hoverHeight" pkg="my_hector" type="hoverHeightServer"/>
+   <!-- Start changeHeading Server node -->
+   <node name="changeHeading" pkg="my_hector" type="changeHeadingServer"/>
+   <!-- Start Obstacle Avoidance node -->
+   <node name="ObstacleAvoidance2_node" pkg="my_hector" type="obstacleAvoidance2"/>
+   
+</launch>
