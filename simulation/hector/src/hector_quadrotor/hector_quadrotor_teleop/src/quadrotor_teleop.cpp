@@ -94,10 +94,12 @@ public:
 
     if (control_mode_str == "twist")
     {
+	  //change values from 2.0 to 0.5
       params.param<double>("x_velocity_max", axes_.x.max, 0.5);
       params.param<double>("y_velocity_max", axes_.y.max, 0.5);
       params.param<double>("z_velocity_max", axes_.z.max, 0.5);
-
+		
+	  //change the topic to publish towards the gateway and not to traditional cmd_vel
       joy_subscriber_ = node_handle_.subscribe<sensor_msgs::Joy>("joy", 1, boost::bind(&Teleop::joyTwistCallback, this, _1));
       velocity_publisher_ = node_handle_.advertise<geometry_msgs::Twist>("obs_cmd_vel", 10);
     }

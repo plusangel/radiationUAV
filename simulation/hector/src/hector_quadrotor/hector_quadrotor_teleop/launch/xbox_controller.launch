@@ -5,6 +5,7 @@
 
   <node name="joy" pkg="joy" type="joy_node" output="screen" >
     <param name="dev" value="$(arg joy_dev)" />
+    <!-- set the autorepeat_rate with update rate 10Hz -->  
     <param name="autorepeat_rate" value="10" />
   </node>
 
