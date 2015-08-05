@@ -1,1 +1,0 @@
-LIDARLite laser sensor
