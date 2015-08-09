@@ -25,4 +25,4 @@ Documents related with the activities and development in this project
 ## Credits
 The work has been developed with the support of the following organisations:
 * Interface Analysis Centre (IAC) at Bristol University
-* Bristol Robotics Lab (BRL) at Uneversity of West England (UWE)
+* Bristol Robotics Lab (BRL) at University of West England (UWE)
