@@ -22,6 +22,9 @@ Develop assisted teleoperation fligh mode using hector-quadrotor simulation
 ### Reports
 Documents related with the activities and development in this project
 
+### Developer
+Angelos Plastropoulos
+
 ## Credits
 The work has been developed with the support of the following organisations:
 * Interface Analysis Centre (IAC) at Bristol University
