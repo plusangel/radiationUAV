@@ -9,6 +9,7 @@ Survey about the properties and utilisation of a range of proximity sensors
 * PulsedLight LIDAR-lite
 * Sharp GP2Y0A02YK0F
 * Px4flow
+* Mapping and proximity application based on Laser sensor
 
 ### iOS
 Development of iOS apps to improve human robot interface and radiation mapping
