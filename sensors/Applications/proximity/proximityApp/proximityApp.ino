@@ -1,9 +1,13 @@
 // Laser proximity application based on ROS (rosserial)
 // Angelos Plastropoulos
 //
-// System set-up
+// System set-up 1
 // ROS Indigo on Ubuntu 32bit 14.04LTS
 // Arduino Uno (RedBoard by SparkFun)
+//
+// System set-up 2
+// ROS Hydro on Ubuntu 32bit 12.04LTS
+// Arduino Nano v3.0 (Atmel 328)
 //
 // It utilizes the 'Arduino I2C Master Library' from DSS Circuits:
 // http://www.dsscircuits.com/index.php/articles/66-arduino-i2c-master-library 
