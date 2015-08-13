@@ -91,7 +91,6 @@ void loop() {
  dist2 = getDistance();
  dist = (dist1+dist2)/2;
  
- dist = getDistance();
  dist0_msg.data = dist;
  pub_dist1.publish(&dist0_msg);
  nh.spinOnce();
@@ -104,7 +103,6 @@ void loop() {
  dist2 = getDistance();
  dist = (dist1+dist2)/2;
  
- dist = getDistance();
  distm90_msg.data = dist;
  pub_dist3.publish(&distm90_msg);
  nh.spinOnce();
@@ -122,7 +120,6 @@ void loop() {
  dist2 = getDistance();
  dist = (dist1+dist2)/2;
  
- dist = getDistance();
  dist0_msg.data = dist;
  pub_dist1.publish(&dist0_msg);
  nh.spinOnce();
