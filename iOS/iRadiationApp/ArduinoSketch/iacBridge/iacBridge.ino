@@ -5,13 +5,17 @@
 // BLE Integration was implemented by Angelos Plastropoulos
 // as part of the MSc in Robotics Dissertation
 //
+// This sketch is executable only in Arduino IDE 1.0.x version
+// 
 ///////////////////////////////////////////////////////////
 
 #include <hiduniversal.h>
 #include <hidescriptorparser.h>
+
 //for SD card
 #include <SPI.h>
 #include <SD.h>
+
 //for gps
 #include <Adafruit_GPS.h>
 #include <SoftwareSerial.h>
@@ -21,11 +25,16 @@
 #include <boards.h>
 #include <RBL_nRF8001.h>
 
-// Union for the iOS-BLE connection
+// Unions for the iOS-BLE connection
 typedef union {
  float floatingPoint;
  byte binary[4];
-} binaryFloat;
+} binaryFloat32;
+
+typedef union {
+ int integer;
+ byte binary[2];
+} binaryInt16;
 
 //--
 
@@ -224,7 +233,8 @@ void loop()
   }
   
   // iOS - BLE connection
-  binaryFloat myLat, myLon;
+  binaryFloat32 myLat, myLon;
+  binaryInt16 myCps;
   byte satellitesByte;
   byte cpsByte;
   byte statusByte = 0x00;
@@ -278,7 +288,7 @@ void loop()
  }
 
 
-  if (timing>exposure){
+ if (timing>exposure){
     
     if (! usingInterrupt) {
     // read data from the GPS in the 'main loop'
@@ -302,27 +312,19 @@ void loop()
     // --
     
     if (GPS.fix) {
-      
+
       //prepare the status byte
       statusByte = 0x01;
       satellitesByte = satellitesByte << 1;
       statusByte = statusByte | satellitesByte;
-      cpsByte = (byte)counts;
+      //cpsByte = (byte)counts;
+      myCps.integer = (uint16_t)15;
       
-      //Serial.print("Status: ");
-      //Serial.println(statusByte);
-      
-      //send the stuff to iOS
+      // prepare the message payload
       ble_write(statusByte);
-      ble_write(myLat.binary[3]);
-      ble_write(myLat.binary[2]);
-      ble_write(myLat.binary[1]);
-      ble_write(myLat.binary[0]);
-      ble_write(myLon.binary[3]);
-      ble_write(myLon.binary[2]);
-      ble_write(myLon.binary[1]);
-      ble_write(myLon.binary[0]);
-      ble_write(cpsByte);
+      ble_write(myLat.binary[3]); ble_write(myLat.binary[2]); ble_write(myLat.binary[1]); ble_write(myLat.binary[0]);
+      ble_write(myLon.binary[3]); ble_write(myLon.binary[2]); ble_write(myLon.binary[1]); ble_write(myLon.binary[0]);
+      ble_write(myCps.binary[1]); ble_write(myCps.binary[0]);
       // end of iOS transmission
       
       Serial.print("loc ");
@@ -344,13 +346,15 @@ void loop()
       myFile.print("ALT "); myFile.println(GPS.altitude);
       //Serial.print("Satellites: "); Serial.println((int)GPS.satellites);
     } else {
-    Serial.println("NO FIX");
-    myFile.println("NO FIX");
-    
-    ble_write(statusByte);
-    ble_write(0x00); ble_write(0x00); ble_write(0x00); ble_write(0x00);
-    ble_write(0x00); ble_write(0x00); ble_write(0x00); ble_write(0x00);
-    ble_write(0x00);
+      Serial.println("NO FIX");
+      myFile.println("NO FIX");
+      
+      // prepare the message payload
+      ble_write(statusByte);
+      ble_write(0x00); ble_write(0x00); ble_write(0x00); ble_write(0x00);
+      ble_write(0x00); ble_write(0x00); ble_write(0x00); ble_write(0x00);
+      ble_write(0x00); ble_write(0x00);
+      // end of iOS transmission
     }
     
    
@@ -377,7 +381,7 @@ void loop()
   tic=toc;
   test+=1;
   
-  
+  // send data to iOS App via bluetooth
   ble_do_events();
   delay(50);
 }
