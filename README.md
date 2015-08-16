@@ -11,19 +11,22 @@ Survey about the properties and utilisation of a range of proximity sensors
 * Optical flow sensor px4flow smart camera
 * Mapping and proximity application based on Laser sensor
 
-### iOS
+### Human Robot Interaction
 Development of iOS apps to improve human robot interface and radiation mapping
 * iRadiation app
 * iOS_ROS
 
 ### Simulation
-Develop assisted teleoperation fligh mode using hector-quadrotor simulation
+Development of an assisted teleoperation fligh mode using hector-quadrotor simulation
 
-### Reports
-Documents related with the activities and development in this project
+### Documentation
+Documents (pdf) related with the activities and development of this project
 
-### Developer
+### Author & Developer
 Angelos Plastropoulos
+
+### Supervisor
+Dr Thomas B. Scott
 
 ## Credits
 This project has been developed with the support of the following organisations:
