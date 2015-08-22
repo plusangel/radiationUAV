@@ -14,7 +14,7 @@
 		<string>https://github.com/plusangel/radiationUAV.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>iOS/iRadiationApp/iRadiationApp/iOS_ADK_BLE.xcodeproj</string>
+	<string>humanRobotInteraction/iRadiationApp/iRadiationApp/iOS_ADK_BLE.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>2F792AED4B9299F5044A1454291A420CF90A3C84</key>
