@@ -1,3 +1,6 @@
+// The functions which handle the LIDAR-Lite measurements taken from 
+// PulsedLight3D LIDARLite_Basics online git repository
+
 #include <Servo.h>
 #include <SPI.h>
 #include <EEPROM.h>
@@ -8,9 +11,9 @@
 
 // servo related info
 Servo servo1;
-int low_us = 555;
-int high_us = 2390;
-int mid_us = 1500;
+int low = 555;
+int high = 2390;
+int mid = 1500;
 
 // Lidar-lite addresses
 #define    LIDARLite_ADDRESS   0x62          // Default I2C Address of LIDAR-Lite.
@@ -101,35 +104,35 @@ void loop() {
 // convert angle in degrees to pulse width in microseconds 
 int degrees2ms(int deg) {
   if(deg <= 0) {
-    return low_us;
+    return low;
   } // end if
   
   if(deg >= 180) {
-    return high_us;
+    return high;
   } // end if
   
   if(deg==90) {
-    return mid_us;
+    return mid;
   }
   
   if(deg<90) {
-    double uS_val = (double(mid_us) - double(low_us)) / 90.000;
-    return int((uS_val * double(deg)) + double(low_us));
+    double val = (double(mid) - double(low)) / 90.000;
+    return int((val * double(deg)) + double(low));
   }
   
   if(deg>90) {
-    double uS_val = (double(high_us) - double(mid_us)) / 90.000;
+    double val = (double(high) - double(mid)) / 90.000;
     deg = deg-90;
-    return int((uS_val * double(deg)) + double(mid_us));
+    return int((val * double(deg)) + double(mid));
   }
 } 
 
 // move servo using pulse width in microseconds
-void moveTheServo(int uS, int duration) {
+void moveTheServo(int ms, int duration) {
   servo1.attach(7);
 
-  if(uS >= 555 && uS <= 2400) {
-    servo1.writeMicroseconds(uS);
+  if(ms >= 555 && ms <= 2390) {
+    servo1.writeMicroseconds(ms);
     delay(duration);
   } // end if
   

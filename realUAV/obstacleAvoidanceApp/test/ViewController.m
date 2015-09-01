@@ -1,6 +1,5 @@
 //
 //  ViewController.m
-//  test
 //
 //  Created by Angelos Plastropoulos on 20/06/2015.
 //  Copyright (c) 2015 Angelos Plastropoulos. All rights reserved.
@@ -51,14 +50,12 @@ union U4i {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self updateStatusWith:@"Initializing"];
     
     // init the BLE manager
     _ble = [[BLE alloc] init];
     [_ble controlSetup];
     _ble.delegate = self;
-    
     
     // various initiliasations
     _fwdDistance = 100;
@@ -107,6 +104,7 @@ union U4i {
 #pragma mark - Actions
 
 - (IBAction)switchChangeValue:(id)sender {
+    // enable the reverse mode if the UISwitch in On
     if ([sender isOn]) {
         reverse = true;
     } else {
@@ -245,34 +243,14 @@ NSTimer *rssiTimer;
             } else if (reverse == true) {
                 [self displayDist:distance inDirect:direction+180];
             }
-            
-            //                _lbldist0.text = [NSString stringWithFormat:@"%d cm", distance];
-            //                if (distance < _sdDistance) {
-            //                    _view0.backgroundColor = [UIColor redColor];
-            //                } else {
-            //                    _view0.backgroundColor = [UIColor greenColor];
-            //                }
         } else if (direction == 90) {
             [self displayDist:distance inDirect:direction];
-            
-            //                _lbldist90.text = [NSString stringWithFormat:@"%d cm", distance];
-            //                if (distance < _fwdDistance) {
-            //                    _view90.backgroundColor = [UIColor redColor];
-            //                } else {
-            //                    _view90.backgroundColor = [UIColor greenColor];
-            //                }
         } else if (direction == 180){
             if (reverse == false) {
                 [self displayDist:distance inDirect:direction];
             } else if (reverse == true) {
                 [self displayDist:distance inDirect:direction-180];
             }
-            //                _lbldist180.text = [NSString stringWithFormat:@"%d cm", distance];
-            //                if (distance < _sdDistance) {
-            //                    _view180.backgroundColor = [UIColor redColor];
-            //                } else {
-            //                    _view180.backgroundColor = [UIColor greenColor];
-            //                }
         }
     }
 }
@@ -280,30 +258,34 @@ NSTimer *rssiTimer;
 #pragma mark - Helper methods
 
 -(void)displayDist:(int32_t)myDist inDirect:(int16_t)myDir {
+    // This finction updates the colour of the regions around the UAV
+    // by comparing the distance thresholds with measured distances
+    // in the three predefined directions
+    
+    // When myDist == 0 means that the LIDAR-Lite measures more than 40m
     if (myDir == 0) {
         _lbldist0.text = [NSString stringWithFormat:@"%d cm", myDist];
-        if (myDist < _sdDistance) {
+        if ((myDist < _sdDistance) && (myDist != 0)) {
             _view0.backgroundColor = [UIColor redColor];
         } else {
             _view0.backgroundColor = [UIColor greenColor];
         }
     } else if (myDir == 90) {
         _lbldist90.text = [NSString stringWithFormat:@"%d cm", myDist];
-        if (myDist < _fwdDistance) {
+        if ((myDist < _fwdDistance) && (myDist != 0)) {
             _view90.backgroundColor = [UIColor redColor];
         } else {
             _view90.backgroundColor = [UIColor greenColor];
         }
     } else if (myDir == 180) {
         _lbldist180.text = [NSString stringWithFormat:@"%d cm", myDist];
-        if (myDist < _sdDistance) {
+        if ((myDist < _sdDistance) && (myDist != 0)) {
             _view180.backgroundColor = [UIColor redColor];
         } else {
             _view180.backgroundColor = [UIColor greenColor];
         }
     }
 }
-
 
 -(void)resetLabels {
     // reset all labels

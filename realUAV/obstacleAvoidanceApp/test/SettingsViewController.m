@@ -19,9 +19,12 @@
 
 @implementation SettingsViewController
 
+#pragma mark - Support internal functionality
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // initialisations
     _txtFWdist.text = [NSString stringWithFormat:@"%d", _fwdDist];
     _txtSDdist.text = [NSString stringWithFormat:@"%d", _sdDist];
     
@@ -42,6 +45,8 @@
 }
 
 -(BOOL) textFieldShouldReturn:(UITextField *)textField {
+    // Handle the user's data entry in the textBoxes
+    
     NSLog(@"textFieldShouldReturn");
     if (textField.tag == 0) {
         _fwdDist = [_txtFWdist.text intValue];
