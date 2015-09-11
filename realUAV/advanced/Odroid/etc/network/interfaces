@@ -1,0 +1,11 @@
+auto eth0
+iface eth0 inet dhcp
+
+auto wlan0
+iface wlan0 inet static
+wireless-mode ad-hoc
+wireless-channel 14
+wireless-essid radMapUAV
+address 192.168.100.110
+netmask 255.255.255.0
+getaway 192.168.100.110

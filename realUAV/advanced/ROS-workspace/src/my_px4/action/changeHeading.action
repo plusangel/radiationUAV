@@ -1,0 +1,8 @@
+#goal definition
+float32 angle
+---
+#result definition
+float32 angleTurned
+---
+#feedback
+float32 angleTotal
