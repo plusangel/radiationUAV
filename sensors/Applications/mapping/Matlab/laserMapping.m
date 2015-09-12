@@ -13,8 +13,6 @@ clc;
 % and sweep angle
 MINDIST = 0;
 MAXDIST = 4000;
-MINANGLE = 0;
-MAXANGLE = 180;
 
 count = 1; % incremental index
 ptNum = 180; % number of scan points
@@ -45,10 +43,9 @@ while(count < ptNum)
     distCheck = size(dist);
     angleCheck = size(angle);
     
-    % safaty checks for distance and angle messages
+    % safaty checks data integrity and distance
     if( (distCheck(1, 1) == 1)  & (distCheck(1,2) == 1) & (angleCheck(1,1) == 1)...
-            & (angleCheck(1,2) == 1) & (dist >= MINDIST) & (dist <= MAXDIST)...
-            & (angle >= MINANGLE) & (angle <= MAXANGLE) )
+            & (angleCheck(1,2) == 1) & (dist >= MINDIST) & (dist <= MAXDIST))
         
         %convert from polar to cartesian system
         x = dist*cos((pi/180.0)*angle);
