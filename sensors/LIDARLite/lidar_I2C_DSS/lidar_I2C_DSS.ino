@@ -2,10 +2,9 @@
 Sample code to interface PulsedLight3d LIDAR-lite with Arduino UNO
 Tested on Arduino IDE 1.6.5
 
-
-http://pulsedlight3d.com
-
 This sketch demonstrates getting distance with the LIDAR-Lite Sensor
+
+The code is part of PulsedLight3D basics apps for driving the LIDAR-Lite
 
 It utilizes the 'Arduino I2C Master Library' from DSS Circuits:
 http://www.dsscircuits.com/index.php/articles/66-arduino-i2c-master-library 
