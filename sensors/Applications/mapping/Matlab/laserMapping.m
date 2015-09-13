@@ -4,6 +4,7 @@
 % RANSAC algorithm is implemented by Yan Ke @ THUEE, xjed09@gmail.com
 % distrubuted for free use as ransac_homography library
 % http://uk.mathworks.com/matlabcentral/fileexchange/30809-ransac-algorithm-with-example-of-finding-homography
+% and from https://github.com/BoRedfearn guides about the serial connection in Matlab
 
 clear all;
 close all;
@@ -13,6 +14,8 @@ clc;
 % and sweep angle
 MINDIST = 0;
 MAXDIST = 4000;
+MINANGLE = 0;
+MAXANGLE = 180;
 
 count = 1; % incremental index
 ptNum = 180; % number of scan points
@@ -43,9 +46,10 @@ while(count < ptNum)
     distCheck = size(dist);
     angleCheck = size(angle);
     
-    % safaty checks data integrity and distance
+    % checks data integrity, distance and angle
     if( (distCheck(1, 1) == 1)  & (distCheck(1,2) == 1) & (angleCheck(1,1) == 1)...
-            & (angleCheck(1,2) == 1) & (dist >= MINDIST) & (dist <= MAXDIST))
+            & (angleCheck(1,2) == 1) & (dist >= MINDIST) & (dist <= MAXDIST)...
+            & (angle >= MINANGLE) & (angle <= MAXANGLE))
         
         %convert from polar to cartesian system
         x = dist*cos((pi/180.0)*angle);
