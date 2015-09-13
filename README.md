@@ -1,4 +1,4 @@
-# radiationUAV
+# radiation Mapping UAV
 
 Next generation radiation mapping using UAS assisted dynamic monitoring networks
 
