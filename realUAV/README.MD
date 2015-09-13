@@ -6,4 +6,6 @@ The human plays the role of the decision center.  More precisely, in this approa
 ### Advanced approach
 The primary difference with the previous system is that in this case there is an onboard computer that makes the decisions for the avoidance manoeuvres and not the operator.  Hence, the onboard computer receives input data from the appropriate sensors and executes the obstacle avoidance algorithm, which was analyzed in the simulation part, in order to execute the required application.  The system was built using ROS providing us the required framework to develop the code that is capable to engage with all the individual system’s components.
 
-Please read details about the technical implementation in the "Real UAV Development" appendix 
+----
+
+In the “UAV configuration” appendix there is a description of the relevant components and guides to avoid usual problems like vibrations and electrical magnetic interference.  Additionally, technical details about the implementation of the basic and the advanced approach are presented in the “Real UAV development” appendix.
