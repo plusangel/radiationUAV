@@ -5,7 +5,7 @@
  * It requires the Arduino library wrapping the I2C interface 
  * in https://github.com/eschnou/arduino-px4flow-i2c
  * 
- *
+ * The code was developed by:
  * Copyright (c) 2014 by Laurent Eschenauer <laurent@eschenauer.be>
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
