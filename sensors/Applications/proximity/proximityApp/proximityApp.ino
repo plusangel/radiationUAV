@@ -14,6 +14,8 @@
 //
 // Parts of the code based on the PulsedLight3d online repositories
 // https://github.com/PulsedLight3D/LIDARLite_Basics
+//
+// and from renuncln.com blog guides for the servo callibration
 
 
 #include <ros.h>
