@@ -9,21 +9,22 @@ Survey about the properties and utilisation of a range of proximity sensors
 * Laser sensor PulsedLight LIDAR-lite
 * Infra red Sharp GP2Y0A02YK0F
 * Optical flow sensor px4flow smart camera
-* Mapping and proximity application based on Laser sensor
+* Mapping and proximity application based on the laser sensor
 
 ### Human Robot Interaction
-Development of iOS apps to improve human robot interface and radiation mapping
-* iRadiation app
-* iOS_ROS
+Development of iOS apps to improve human robot interaction and radiation mapping
+* iRadiation app (radiation mapping application)
+* iOS_ROS (control a ROS-enabled UAV)
 
 ### Simulation
 Development of an assisted teleoperation fligh mode using hector-quadrotor simulation
+using ROS, gazebo and hector quad-rotor UAV simulator.
 
 ### Real UAV
-Real UAV obstacle avoidance behaviour 
+Real UAV obstacle avoidance behaviour by implementing two approaches.
 
 ### Documentation
-Documents (pdf) related with the activities and development of this project
+Documents (pdf) related with the activities and development of this project.
 
 ### Author & Developer
 Angelos Plastropoulos
