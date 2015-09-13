@@ -1,5 +1,10 @@
+// Laser obstacle detection application based on ROS (rosserial)
+// Angelos Plastropoulos
+//
 // The functions which handle the LIDAR-Lite measurements taken from 
 // PulsedLight3D LIDARLite_Basics online git repository
+//
+// and from renuncln.com blog guides for the servo callibration
 
 #include <ros.h>
 #include <std_msgs/Float32.h>
