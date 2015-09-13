@@ -17,8 +17,7 @@ Development of iOS apps to improve human robot interaction and radiation mapping
 * iOS_ROS (control a ROS-enabled UAV)
 
 ### Simulation
-Development of an assisted teleoperation fligh mode using hector-quadrotor simulation
-using ROS, gazebo and hector quad-rotor UAV simulator.
+Development of an assisted teleoperation fligh mode using ROS, gazebo and hector quad-rotor UAV simulator.
 
 ### Real UAV
 Real UAV obstacle avoidance behaviour by implementing two approaches.
