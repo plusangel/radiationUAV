@@ -8,5 +8,6 @@ For each sensor you can find the appropriate skech in order to perform measureme
 At the end you can find two sensor applications as prototypes which can be used as a base to build more sophisticated
 approaches.
 
+----
 
-Please read the "Sensors Circuits" appendix for more technical details
+The schematic representations of the experiments and the related measurement tables are illustrated in a separate section in the appendices, “Sensors Experiments”.  Technical details about the circuits, which were used, and information regarding the source code can be found in the section “Sensor Circuits” in the appendices.
