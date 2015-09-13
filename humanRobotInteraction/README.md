@@ -6,4 +6,6 @@ The aim of this application is to implement an immersive interface in order to c
 ### iRadiationApp
 The radiation mapping application was designed to give real time connection and feedback from all the functional components in the radiation mapping base unit.  Thus, the operator can have direct information from the Bluetooth link, the GPS connection and the spectrometer device.  In addition to that, the radiation measurements are visualized on a map using color-encoded dots.
 
+----
+
 Technical description and details about the development of the applications are explained in the “Mobile Applications Development” Appendix.  Presentation of the functionality of each application can be found in the “Mobile Applications Functionality” appendix.
