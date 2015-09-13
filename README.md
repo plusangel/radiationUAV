@@ -25,6 +25,9 @@ Real UAV obstacle avoidance behaviour by implementing two approaches.
 ### Documentation
 Documents (pdf) related with the activities and development of this project.
 
+### Videos
+Videos realated with the project's experiments can be found in: goo.gl/JyTzGp
+
 ### Author & Developer
 Angelos Plastropoulos
 
