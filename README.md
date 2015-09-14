@@ -28,7 +28,7 @@ Real UAV obstacle avoidance behaviour by implementing two approaches.
 Documents (pdf) related with the activities and development of this project.
 
 ### [Videos] (https://www.youtube.com/user/rebelCatDevelopment)
-Videos realated with the project's experiments can be found in: goo.gl/JyTzGp
+Videos related with the project's experiments can be found in: goo.gl/JyTzGp
 
 ### Author & Developer
 Angelos Plastropoulos
@@ -37,6 +37,6 @@ Angelos Plastropoulos
 Dr Thomas B. Scott
 
 ## Credits
-This project has been developed with the support of the following organisations:
+This project has been developed with the support of the following organizations:
 * Interface Analysis Centre (IAC) at Bristol University
 * Bristol Robotics Lab (BRL) at University of West England (UWE)
