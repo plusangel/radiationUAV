@@ -2,7 +2,7 @@
 
 Next generation radiation mapping using UAS assisted dynamic monitoring networks
 
-![radiationUAV](http://www.rebelcatdev.com/wp-content/uploads/photos/DSC_3286_s2.jpg)
+![radiationUAV](https://plusangel.files.wordpress.com/2017/02/dsc_32741.jpg)
 
 ### [Sensors] (https://github.com/plusangel/radiationUAV/tree/master/sensors)
 Survey about the properties and utilisation of a range of proximity sensors
